@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet" />
+    
+    <!-- scripts -->
+    <script src="./project-card.js" type="module"></script>
+
 </head>
 
 <body>
@@ -21,11 +25,14 @@
             Elliot Lee
         </h1>
         <p>
-            Student ; Developer
+            student ; developer
         </p>
         <nav> 
-            <line class="vertical"></line>
-            <div id="styled-socials-container">
+            
+            <line class="vertical">
+                <line class="horizontal"></line>
+            </line>
+            <div id="socials-container">
                 
                 <a href="https://github.com/eal001/">
                     <img src="assets/github.svg" alt="linkedin-icon">
@@ -38,14 +45,28 @@
                 </a>
                 
             </div>
-            <line class="vertical"></line>
+            <div id="dark-mode-container">
+                <label id="dark-mode-label">dark</label>
+                <input id="dark-mode-input" type="checkbox">
+            </div>
+            <line class="vertical">
+                <line class="horizontal" id="bottom"></line>
+            </line>
         </nav>
         
         <section id="about">
-            skills
-        </section>
+            As a student, I fuel my curiosity and creativity through building 
+            <a href="">fullstack web applications</a> utilizing new technologies and 
+            experimenting with new <a>machine learning algorithms</a>!
+            <br>
+            Currently I'm studying at the University of California San Diego and
+            I plan to join the tech industry at Amazon after graduation!
+        </section> 
         <section id="projects">
-            projects
+            <h2>My Projects</h2>
+            <div id="project-container">
+
+            </div>
         </section>
     </main>
 </body>
