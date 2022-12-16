@@ -19,7 +19,7 @@ class project_card extends HTMLElement {
     }
 
     set data(data) {
-        self.data = data;
+        this.data = data;
         const container_link = this.shadowRoot.querySelector('a');
         container_link.setAttribute('href', data.link);
         
@@ -30,3 +30,5 @@ class project_card extends HTMLElement {
         description.innerHTML = data.description;
     }
 }
+
+customElements.define('project-card', project_card);
