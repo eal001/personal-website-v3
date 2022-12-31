@@ -1,6 +1,5 @@
-export class circular_list {
+export default class circular_list {
     constructor(array) {
-        super();
         this.array = array;
         this.current_index = 0;
     }
@@ -12,14 +11,14 @@ export class circular_list {
     go_previous() {
         this.current_index -= 1;
         if (this.current_index < 0){
-            this.current_index = array.length - 1;
+            this.current_index = this.array.length - 1;
         }
     }
 
     get_previous() {
         let idx = this.current_index - 1;
         if (idx < 0){
-            idx = array.length - 1;
+            idx = this.array.length - 1;
         }
     }
 
