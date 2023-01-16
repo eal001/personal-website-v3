@@ -20,6 +20,7 @@ export default class circular_list {
         if (idx < 0){
             idx = this.array.length - 1;
         }
+        return this.array[idx];
     }
 
     go_next() {
@@ -34,6 +35,7 @@ export default class circular_list {
         if (idx > this.array.length - 1){
             idx = 0;
         }
+        return this.array[idx];
     }
 
     get(index) {

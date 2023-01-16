@@ -34,7 +34,6 @@ p {
 
 section { 
     text-align: left;
-    margin-top: 1rem;
     padding: 1rem;
     background-color: rgb(28, 28, 28);
 }
@@ -74,10 +73,22 @@ skill {
     display: block;
     background-color: rgb(28, 28, 28);
     padding: 1rem;
+    margin: 0.5rem;
+    transition: transform 250ms linear;
+}
+
+#content {
+    height: calc(100% - 6.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 #skills {
+    position: relative;
     background-color: transparent;
+    width: 100%;
 }
 
 #color-mode {
