@@ -14,8 +14,9 @@ body {
 main {
     border: 0.125rem solid white;
     padding: 1rem;
-    text-align: right;
+    text-align: left;
     height: calc(100% - 3.5rem);
+    display: block;
 }
 
 h1 {
@@ -40,6 +41,8 @@ section {
 
 nav {
     margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
 }
@@ -66,7 +69,12 @@ a {
 }
 
 a:hover {
-    color: rgb(156, 0, 156);
+    font-weight: 1000;
+}
+
+a span {
+    display: none;
+    font-weight: 1000;
 }
 
 skill {
@@ -77,11 +85,31 @@ skill {
     transition: transform 250ms linear;
 }
 
+dot {
+    /* transform: translate(-0.6rem, -0.6rem); */
+    width: 2rem;
+    height: 2rem;
+    border: 0.125rem solid white;
+    /* position: absolute; */
+    display: inline-block;
+    transition: transform 500ms ease-in-out;
+}
+
+a:hover dot {
+    transform-origin: center;
+    transform: rotate(135deg);
+    background-color: white;
+}
+
+a:active span {
+    display: inline;
+}
+
 #content {
-    height: calc(100% - 6.5rem);
+    margin-top: 20%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -101,9 +129,6 @@ skill {
 }
 
 @media only screen and (min-width: 576px) {
-    a span {
-        display: none;
-    }
     nav {
         margin-left: 0;
         margin-right: 0;
@@ -114,19 +139,5 @@ skill {
         display: relative;
         margin: 0.5rem;
         margin-left: 3rem;
-    }
-    dot {
-        transform: translate(-0.6rem, -0.6rem);
-        min-width: 1rem;
-        height: 1rem;
-        border: 0.125rem solid white;
-        position: absolute;
-        transition: transform 500ms ease-in-out;
-    }
-
-    dot:hover {
-        transform-origin: center;
-        transform: translate(-0.6rem, -0.6rem) rotate(135deg);
-        background-color: white;
     }
 }
