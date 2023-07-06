@@ -3,6 +3,17 @@ html {
     font-size: 24px;
     touch-action: manipulation;
 }
+body {
+    margin: 0px;
+}
+
+header {
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 main {
     background-color: black;
@@ -11,6 +22,12 @@ main {
 }
 
 h1 {
+    margin: 0px;
     text-align: center;
     font-weight: 500;
+}
+
+#color-mode {
+    display: flex;
+    justify-content: space-evenly;
 }
