@@ -42,12 +42,13 @@ function display_section() {
 
 /**
  * a function to turn all nav links normal weight, and then bold a specific id
+ * TODO: NOT WORKING
  *
  * @param {object} arguments list of strings that specify the id to make bold
  */
  function apply_bold() {
     document.querySelectorAll('nav a').forEach(element => {
-        element.style.fontWeight = 400;
+        element.style.fontWeight = 100;
     });
     for (let i = 0; i < arguments.length; i++) {
         document.getElementById(arguments[i]).style.fontWeight = 1000;
@@ -63,8 +64,7 @@ function display_nav_span(nav_section){
         element.style.display = "none";
     })
     nav_section = document.getElementById(nav_section).children;
-    // console.log(nav_section[1]);
-    nav_section[1].style.display = "block"
+    nav_section[1].style.display = "inline-block";
 }
 
 export default null;
