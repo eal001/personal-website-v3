@@ -16,15 +16,45 @@ header {
 }
 
 main {
-    background-color: black;
+    background-color: aliceblue;
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
 h1 {
     margin: 0px;
+    padding-top: 72px;
+    padding-bottom: 72px;
     text-align: center;
     font-weight: 500;
+}
+
+.header-icon{
+    opacity: 25%;
+    position: absolute;
+    height: 72px;
+    width: 72px;
+}
+.icon {
+    height: 72px;
+    width: 72px;
+}
+
+.header-icon-container {
+    position: relative;
+    min-width: 72px;
+    margin: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+nav {
+    font-size: 16px;
+    position: fixed;
+    top: 0px;
+    margin: 1rem;
 }
 
 #color-mode {
