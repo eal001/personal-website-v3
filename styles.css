@@ -1,150 +1,16 @@
 html {
-    font-size: 16px;
-    font-family:'Courier New', Courier, monospace;
-    color:rgb(138, 138, 138);
-}
-
-body {
-    background-color: rgb(21, 21, 21);
-    text-decoration: none;
-    margin: 1.5rem;
-    height: calc(100vh - 3rem);
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    touch-action: manipulation;
 }
 
 main {
-    border: 0.125rem solid white;
-    padding: 1rem;
-    text-align: left;
-    height: calc(100% - 3.5rem);
-    display: block;
+    background-color: black;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 h1 {
-    margin: 0;
-}
-
-h2 {
-    font-size: 1.25rem;
-    text-align: left;
-    margin: 0rem;
-}
-
-p {
-    margin: 0;
-}
-
-section { 
-    text-align: left;
-    padding: 1rem;
-    background-color: rgb(28, 28, 28);
-}
-
-nav {
-    margin: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav a {
-    display: flex;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    font-family:'Courier New', Courier, monospace;
-    color: rgb(99, 99, 99);
-}
-
-button:hover {
-    background-color: white;
-}
-
-button:active {
-    background-color: white;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    font-weight: 1000;
-}
-
-a span {
-    display: inline-block;
-    font-weight: 1000;
-    margin: 1rem;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-skill {
-    display: block;
-    background-color: rgb(28, 28, 28);
-    padding: 1rem;
-    margin: 0.5rem;
-    transition: transform 250ms linear;
-}
-
-dot {
-    /* transform: translate(-0.6rem, -0.6rem); */
-    width: 2rem;
-    height: 2rem;
-    border: 0.125rem solid white;
-    /* position: absolute; */
-    display: inline-block;
-    transition: transform 500ms ease-in-out;
-}
-
-a:hover dot {
-    transform-origin: center;
-    transform: rotate(135deg);
-    background-color: white;
-}
-
-a:active span {
-    display: inline;
-}
-
-#content {
-    margin-top: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#skills {
-    position: relative;
-    background-color: transparent;
-    width: 100%;
-}
-
-#color-mode {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-#dark {
-    background-color: white;
-}
-
-@media only screen and (min-width: 576px) {
-    nav {
-        margin-left: 0;
-        margin-right: 0;
-        display: flex;
-        justify-content: right;
-    }
-    nav a {
-        display: relative;
-        margin: 0.5rem;
-        margin-left: 3rem;
-    }
+    text-align: center;
+    font-weight: 500;
 }
