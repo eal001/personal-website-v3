@@ -2,14 +2,16 @@ html {
     font-family: "Josefin Sans";
     font-size: 24px;
     touch-action: manipulation;
+    background-color: #9393FF;
 }
 body {
     margin: 0px;
+    background-color: white;
 }
 
 header {
-    height: 100vh;
-    background-color: bisque;
+    height: 80vh;
+    background-color: #9393FF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,8 +25,6 @@ main {
 
 h1 {
     margin: 0px;
-    padding-top: 72px;
-    padding-bottom: 72px;
     text-align: center;
     font-weight: 500;
 }
@@ -42,7 +42,6 @@ h1 {
 
 .header-icon-container {
     position: relative;
-    min-width: 72px;
     margin: 1rem;
 }
 
@@ -51,10 +50,19 @@ h1 {
 }
 
 nav {
-    font-size: 16px;
+    font-size: 1rem;
     position: fixed;
     top: 0px;
+    background-color: rgb(255,255,255, 0.25);
+    border-radius: 1rem;
+    padding: 0.5rem;
     margin: 1rem;
+}
+
+nav a {
+    position: relative;
+    margin: 1rem;
+    font-weight: 300;
 }
 
 #color-mode {
