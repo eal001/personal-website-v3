@@ -1,16 +1,17 @@
-html {
-    font-family: "Josefin Sans";
-    font-size: 24px;
+html {    
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(44, 66, 81);
     touch-action: manipulation;
-    background-color: #9393FF;
+    background-color: rgb(193, 193, 193);
 }
 body {
     margin: 0px;
 }
 
 header {
-    height: 80vh;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(147, 147, 255, 1) 70%,  rgba(147, 147, 255, 1) 100%);
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,24 +20,119 @@ header {
 main {
     margin-left: 1rem;
     margin-right: 1rem;
-    background-color: rgb(255,255,255, 0.25);
 }
 
 h1 {
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+header p {
+    background-color: transparent;
+    text-align: center;
+    padding: 0px;
+    margin: 0rem;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3 {
+    margin: 0rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+p {
+    margin: 0rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+ul {
+    position: relative;
+    margin: 0rem;
+    list-style-type: none;
+    margin-left: 1.5rem;
+    padding: 0;
+}
+
+.text-content p::before {
+    background-color: rgb(252, 81, 48);
+    position: absolute;
+    content:"";
+    z-index: -1;
+    width: .5rem ;
+    height: 100%;
+    left: -1.5rem;
+    border-radius: 1rem;
+}
+
+.text-content img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    opacity: 20%;
+}
+
+.text-content {
+    position: relative;
+    background-color: rgb(255,255,255, 0.25);
+    padding: 2rem;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.list-content {
+    position: relative;
+    background-color: rgb(44, 66, 81);
+    color: rgb(208, 207, 207);
+    border-radius: 3rem;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.list-content ul::before {
+    background-color: rgb(252, 81, 48);
+    position: absolute;
+    content:"";
+    width: .5rem ;
+    height: 100%;
+    top: 0rem;
+    left: -1.5rem;
+    border-radius: 1rem;
+}
+
+.top-corner {
+    margin-top: 0;
+    border-radius: 0 0 3rem 3rem;
+}
+
+.bottom-corner {
+    margin-bottom: 0;
+    border-radius: 3rem 3rem 0 0;
 }
 
 .header-icon{
-    opacity: 25%;
+    opacity: 20%;
     position: absolute;
-    height: 72px;
-    width: 72px;
-}
-.icon {
-    height: 72px;
-    width: 72px;
+    height: 64px;
+    width: 64px;
 }
 
 .header-icon-container {
@@ -53,7 +149,7 @@ nav {
     top: 0px;
     background-color: rgb(255,255,255, 0.25);
     border-radius: 2rem;
-    padding: 0.75rem;
+    padding: 1rem;
     margin: 1rem;
     display: flex;
     justify-content: space-between;
@@ -63,7 +159,17 @@ nav {
 nav a {
     position: relative;
     font-size: 0.85rem;
-    font-weight: 300;
+    font-weight: 500;
+    color:rgb(44, 66, 81)
+}
+
+a {
+    font-weight: 700;
+    color: rgb(252, 81, 48);
+}
+
+a:hover {
+    color: rgb(255, 252, 49);
 }
 
 #color-mode {

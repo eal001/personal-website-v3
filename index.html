@@ -12,7 +12,7 @@
     <!-- font for copyright -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     
     <!-- scripts -->
     <script src="./index.js" type="module"></script>
@@ -22,9 +22,13 @@
     <header>
         <div class="flex">
             <div class="header-icon-container"></div>
-            <h1>
-                Elliot Lee <br> Software Developer
-            </h1>
+            <div>
+                <h1>
+                    I'm <a>Elliot Lee</a>.<br>A Software Developer.
+                </h1>
+                <p>and I love building things.</p>
+            </div>
+            
             <div class="header-icon-container"></div>
 
             <img class="header-icon" src="assets/api.svg" alt="Web Development">
@@ -46,14 +50,64 @@
     </header>
 
     <main>
-        main
-        <br>
-        /main
-        <br>
-        vsvdawsdv
-        asdv efdawdgv adfwaefdsewa qefq eeae adfwaefdsewa
-        <br>
-        sfdhse
+        <section id="expertise">
+            <h2>My Expertise Includes ...</h2>
+            <div class="text-content">
+                <h3>Software Development</h3>
+                <p>
+                    I work professionally in <a>Software Development</a> and am experienced 
+                    in OOP, algorithm design, and languages ranging from Java to C.
+                </p>
+                <img src="assets/computer.svg" alt="SD">
+            </div>
+            <div class="text-content">
+                <h3>Machine Learning</h3>
+                <p>
+                    <a>Machine Learning</a> with a focus on <a>Neural Networks</a> is a growing 
+                    interest of mine because of its effectiveness in solving real world problems.
+                </p>
+                <img src="assets/neural-net.svg" alt="NN">
+            </div>
+            <div class="text-content">
+                <h3>Web Technologies</h3>
+                <p>
+                    I maintain a personal passion for <a>Web Development</a>. With technologies like 
+                    HTML and JavaScript, Node.js and React, or AWS, I create accessible, user-centric 
+                    applications. 
+                </p>
+                <img src="assets/website.svg" alt="WT">
+            </div>
+        </section>
+        <section id="personal">
+            <h2>Currently, I Am ...</h2>
+            <div class="content-container">
+                <div class="text-content bottom-corner">
+                    <h3>Prioritizing Fitness</h3>
+                    <p>
+                        I started weightlifting in highschool and now it has become an essential part of 
+                        my day. You also might find me running to keep up with my cardiovascular health!
+                    </p>
+                </div>
+                <div class="list-content top-corner">
+                    <ul>
+                        <li>Flat Bench Press: <a>215lbs</a></li>
+                        <li>Low Bar Back Squat: <a>315lbs</a></li>
+                        <li>Conventional Deadlift: <a>350lbs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-content">
+                <h3>Looking for New Music</h3>
+                <p>
+                    I'm a fan of rock and rap music, though my taste isnt strictly limited to any genre
+                </p>
+            </div>
+            <div class="text-content">
+                <h3>Playing Video Games</h3>
+            </div>
+        </section>
+        
     </main>
 
     <footer>

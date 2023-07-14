@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', init);
  */
 function init() {
     choose_header_icons();
-    choose_header_background();
+    // choose_header_background();
 }
 
 /**
@@ -24,24 +24,23 @@ function choose_header_icons() {
         icons[i].style.display = "none";
         if(i == idx1){
             icons[i].style.display = "block";
-            icons[i].style.top = "-128px"
+            icons[i].style.top = "-80px"
             icon_containers[0].appendChild(icons[i]);
         }
         if(i == idx2){
             icons[i].style.display = "block";
-            icons[i].style.bottom = "-128px";
-            icons[i].style.left = "-72px";
+            icons[i].style.bottom = "-80px";
+            icons[i].style.left = "-80px";
             icon_containers[1].appendChild(icons[i]);
         }
     }
 }
 
 /**
- * Chooses the pattern of the header gradient 
+ * Chooses the pattern of the header gradient
+ * not using this for now until I figure out a better header card design 
  */
 function choose_header_background() {
-    
-
     const red_value = Math.floor(Math.random() * 255);
     const green_value = Math.floor(Math.random() * 255);
     const blue_value = Math.floor(Math.random() * 255);
