@@ -1,10 +1,10 @@
 html {    
-    font-family: 'Lato', sans-serif;
+    font-family: 'Futura', sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 100;
     color: rgb(44, 66, 81);
     touch-action: manipulation;
-    background-color: rgb(193, 193, 193);
+    background-color: rgb(234, 227, 211);
 }
 body {
     margin: 0px;
@@ -69,7 +69,6 @@ ul {
     background-color: rgb(252, 81, 48);
     position: absolute;
     content:"";
-    z-index: -1;
     width: .5rem ;
     height: 100%;
     left: -1.5rem;
@@ -90,7 +89,7 @@ ul {
 
 .text-content {
     position: relative;
-    background-color: rgb(255,255,255, 0.25);
+    background-color: rgb(235, 235, 235);
     padding: 2rem;
     border-radius: 3rem;
     margin-top: 1rem;
@@ -99,8 +98,8 @@ ul {
 
 .list-content {
     position: relative;
-    background-color: rgb(44, 66, 81);
-    color: rgb(208, 207, 207);
+    background-color: rgb(255,255,255);
+    /* color: rgb(208, 207, 207); */
     border-radius: 3rem;
     padding: 2rem;
     padding-top: 1rem;
@@ -169,10 +168,50 @@ a {
 }
 
 a:hover {
-    color: rgb(255, 252, 49);
+    color: rgb(252, 81, 48);;
 }
 
 #color-mode {
     display: flex;
     justify-content: space-evenly;
+}
+
+footer { 
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+button {
+    background-color: transparent;
+    padding: 1rem;
+    border: 0;
+    border-radius: .5rem;
+}
+
+button img {
+    display: block;
+    height: 2rem;
+    margin: 0;
+    transition: 500ms ease-out;
+}
+
+#light img{
+    filter: invert(21%) sepia(20%) saturate(870%) hue-rotate(161deg) brightness(72%) contrast(90%);
+
+}
+
+#dark img{
+    filter: invert(21%) sepia(20%) saturate(870%) hue-rotate(161deg) brightness(99%) contrast(90%);
+}
+
+button:disabled{
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+button:hover#light img{
+    transform: rotate(180deg);
+}
+button:hover#dark img{
+    transform: rotate(270deg);
 }
