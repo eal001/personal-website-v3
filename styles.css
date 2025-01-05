@@ -229,6 +229,11 @@ ul {
 
 .flex {
     display: flex;
+    align-items: center;
+}
+
+.flex-left {
+    justify-content: baseline;
 }
 
 .center-text {
@@ -282,6 +287,12 @@ a {
 
 a:hover {
     color: var(--accent-interaction-color);
+}
+
+.list-content img {
+    display: inline;
+    height: 2rem;
+    margin: 1rem;
 }
 
 #color-mode {
