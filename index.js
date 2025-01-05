@@ -6,6 +6,15 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
     choose_header_icons();
     // choose_header_background();
+
+    const light_button = document.querySelector("button#light");
+    const dark_button = document.querySelector("button#dark");
+    const selection_background = document.querySelector("#color-mode #button-container #selection-background");
+    light_button.addEventListener("click", () => {
+            set_color_theme(light_button, dark_button, selection_background, 'light')});
+    dark_button.addEventListener("click", () => {
+            set_color_theme(light_button, dark_button, selection_background, 'dark')});
+    set_color_theme(light_button, dark_button, selection_background, 'light');
 }
 
 /**
@@ -59,4 +68,26 @@ function choose_header_background() {
     header.style.background = "linear-gradient(" + rotation + "deg,"
         + "rgba(147, 147, 255, 0.5) ," 
         + "rgba(" + red_value + ", " + green_value + ", " + blue_value + ", 0.8))"; 
+}
+
+/**
+ * Sets the color theme of the website
+ * @param {the document light button object} light_button 
+ * @param {the document dark button object} dark_button 
+ * @param {the document selection background for the theme buttons} selection_background
+ * @param {string either light or dark} theme 
+ */
+function set_color_theme(light_button, dark_button, selection_background, theme) {
+    const selection_background_transform = "translateY(-4rem) ";
+    if (theme == 'light') {
+        light_button.disabled = true;
+        dark_button.disabled = false;
+        selection_background.style.transform = selection_background_transform;
+    } else if (theme == 'dark') {
+        light_button.disabled = false;
+        dark_button.disabled = true;
+        selection_background.style.transform = selection_background_transform + " translateX(4.25rem)";
+    } else {
+        throw new Error(`invalid theme '${theme}' provided`);
+    }
 }
