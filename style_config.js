@@ -3,7 +3,7 @@ export class Style_Config {
         background_color: "rgb(234, 227, 211)",
         text_color: "rgb(44, 66, 81)",
         accent_color: "rgb(232, 64, 40)",
-        accent_interaction_color: "rgb(252, 81, 48)",
+        accent_interaction_color: "rgb(252, 93, 76)",
         content_color: "rgb(235, 235, 235)",
         detail_color: "rgb(240, 240, 240)",
         transparent_widget_color: "rgb(255,255,255, 0.25)"
