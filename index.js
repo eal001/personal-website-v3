@@ -1,3 +1,4 @@
+import { Style_Config } from "./style_config.js";
 window.addEventListener('DOMContentLoaded', init);
 
 /**
@@ -7,14 +8,14 @@ function init() {
     choose_header_icons();
     // choose_header_background();
 
+    const style_config = new Style_Config();
     const light_button = document.querySelector("button#light");
     const dark_button = document.querySelector("button#dark");
-    const selection_background = document.querySelector("#color-mode #button-container #selection-background");
     light_button.addEventListener("click", () => {
-            set_color_theme(light_button, dark_button, selection_background, 'light')});
+            set_color_theme(style_config, 'light')});
     dark_button.addEventListener("click", () => {
-            set_color_theme(light_button, dark_button, selection_background, 'dark')});
-    set_color_theme(light_button, dark_button, selection_background, 'light');
+            set_color_theme(style_config, 'dark')});
+    set_color_theme(style_config, 'dark');
 }
 
 /**
@@ -72,21 +73,29 @@ function choose_header_background() {
 
 /**
  * Sets the color theme of the website
- * @param {the document light button object} light_button 
- * @param {the document dark button object} dark_button 
- * @param {the document selection background for the theme buttons} selection_background
+ * @param {style config object to use to determine colors} style_config
  * @param {string either light or dark} theme 
  */
-function set_color_theme(light_button, dark_button, selection_background, theme) {
+function set_color_theme(style_config, theme) {
+    const light_button = document.querySelector("button#light");
+    const dark_button = document.querySelector("button#dark");
+    const selection_background = document.querySelector("#color-mode #button-container #selection-background");
+    const header_icons = document.querySelectorAll(".header-icon");
+
     const selection_background_transform = "translateY(-4rem) ";
+
     if (theme == 'light') {
         light_button.disabled = true;
         dark_button.disabled = false;
         selection_background.style.transform = selection_background_transform;
+        header_icons.forEach(icon => {icon.style.filter = "";});
+        style_config.set_colors_to_css_variables("light");
     } else if (theme == 'dark') {
         light_button.disabled = false;
         dark_button.disabled = true;
         selection_background.style.transform = selection_background_transform + " translateX(4.25rem)";
+        style_config.set_colors_to_css_variables("dark");
+        header_icons.forEach(icon => {icon.style.filter = "invert(100%)"});
     } else {
         throw new Error(`invalid theme '${theme}' provided`);
     }

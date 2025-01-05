@@ -1,10 +1,33 @@
-html {    
-    font-family: 'Futura', sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    color: rgb(44, 66, 81);
+:root {
+    --title-font: 'Futura', sans-serif;
+    --title-font-weight: 100;
+    --title-font-size: 20px;
+    --header-font: 'Josefin Sans', sans-serif;
+    --header-font-weight: 700;
+    --content-font: 'Josefin Sans', sans-serif;
+    --content-font-weight: 500;
+
+    /* 
+    once these values become edited by any js, it wont mattter what they are
+    initialized to here, just that they are initialized. All style configuration
+    managed by js will be in the style config file.
+    */
+    --background-color: rgb(234, 227, 211);
+    --text-color: rgb(44, 66, 81);
+    --accent-color: rgb(252, 81, 48);
+    --accent-interaction-color: rgb(255, 255, 0);
+    --content-color: rgb(235, 235, 235);
+    --detail-color: rgb(255, 255, 255);
+    --transparent-widget-color: rgb(255,255,255, 0.25);
+}
+
+html {
+    font-family: var(--title-font);
+    font-size: var(--title-font-size);
+    font-weight: var(--title-font-weight);
+    color: var(--text-color);
     touch-action: manipulation;
-    background-color: rgb(234, 227, 211);
+    background-color: var(--background-color);
 }
 body {
     margin: 0px;
@@ -23,10 +46,10 @@ main {
 }
 
 h1 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--header-font);
     margin: 0px;
     text-align: center;
-    font-weight: 700;
+    font-weight: var(--header-font-weight);
     font-size: 2rem;
 }
 
@@ -38,19 +61,21 @@ header p {
 }
 
 h2 {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
+    font-family: var(--header-font);
+    font-weight: var(--header-font-weight);
     text-align: center;
 }
 
 h3 {
     margin: 0rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
+    font-family: var(--header-font);
+    font-weight: var(--header-font-weight);
     text-align: left;
 }
 
 p {
+    font-family: var(--content-font);
+    font-weight: var(--content-font-weight);
     margin: 0rem;
     margin-top: 1rem;
     margin-left: 1.5rem;
@@ -66,7 +91,7 @@ ul {
 }
 
 .text-content p::before {
-    background-color: rgb(252, 81, 48);
+    background-color: var(--accent-color);
     position: absolute;
     content:"";
     width: .5rem ;
@@ -89,7 +114,7 @@ ul {
 
 .text-content {
     position: relative;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--content-color);
     padding: 2rem;
     border-radius: 3rem;
     margin-top: 1rem;
@@ -98,8 +123,7 @@ ul {
 
 .list-content {
     position: relative;
-    background-color: rgb(255,255,255);
-    /* color: rgb(208, 207, 207); */
+    background-color: var(--detail-color);
     border-radius: 3rem;
     padding: 2rem;
     padding-top: 1rem;
@@ -107,7 +131,7 @@ ul {
 }
 
 .list-content ul::before {
-    background-color: rgb(252, 81, 48);
+    background-color: var(--accent-color);
     position: absolute;
     content:"";
     width: .5rem ;
@@ -146,29 +170,30 @@ ul {
 nav {
     position: fixed;
     top: 0px;
-    background-color: rgb(255,255,255, 0.25);
+    background-color: var(--transparent-widget-color);
     border-radius: 2rem;
     padding: 1rem;
     margin: 1rem;
     display: flex;
     justify-content: space-between;
     width: 60%;
+    z-index: 1;
 }
 
 nav a {
     position: relative;
     font-size: 0.85rem;
-    font-weight: 500;
-    color:rgb(44, 66, 81)
+    font-weight: var(--content-font-weight);
+    color: var(--text-color);
 }
 
 a {
-    font-weight: 700;
-    color: rgb(252, 81, 48);
+    font-weight: var(--header-font-weight);
+    color: var(--accent-color)
 }
 
 a:hover {
-    color: rgb(252, 81, 48);
+    color: var(--accent-interaction-color);
 }
 
 #color-mode {
@@ -177,7 +202,7 @@ a:hover {
 }
 
 #color-mode #button-container {
-    background-color: rgb(252, 81, 48);
+    background-color: var(--accent-color);
     border-radius: 2rem;
     z-index: 0;
 }
@@ -188,7 +213,7 @@ a:hover {
     height: 3rem;
     margin: .5rem;
     border-radius: 2rem;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--detail-color);
     transform: translateY(-4rem);
     transition: transform 250ms ease-out;
     z-index: -1;
