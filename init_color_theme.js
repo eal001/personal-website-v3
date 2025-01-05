@@ -12,8 +12,16 @@ export function init_color_theme() {
             set_color_theme(style_config, 'light')});
     dark_button.addEventListener("click", () => {
             set_color_theme(style_config, 'dark')});
+    // remove theme button animation when initializing 
+    const selection_background = document.querySelector("#color-mode #button-container #selection-background");
+    selection_background.style.transition = "none";
     const theme = (localStorage.getItem(COLOR_THEME_FIELD) == 'dark') ? "dark" : "light";
     set_color_theme(style_config, theme);
+
+    // give animation back when load is complete
+    window.addEventListener("load", () => {
+        selection_background.style.transition = style_config.switch_transition;
+    })
 }
 
 /**

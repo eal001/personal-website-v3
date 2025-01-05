@@ -17,6 +17,7 @@ export class Style_Config {
         detail_color: "rgb(18, 10, 12)",
         transparent_widget_color: "rgb(0,0,0, 0.25)"
     }
+    switch_transition = "transform 250ms ease-out";
 
     /**
      * sets the color variables to the configured values
