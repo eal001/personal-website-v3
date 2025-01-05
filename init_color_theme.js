@@ -1,4 +1,4 @@
-import { Style_Config } from "../style_config.js";
+import { Style_Config } from "./style_config.js";
 
 const COLOR_THEME_FIELD = "color_theme";
 /**
