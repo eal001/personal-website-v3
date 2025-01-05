@@ -13,4 +13,3 @@ and to run locally open ```index.html``` on a local port!
 these are mostly notes to myself so that i rememebr what i wanted to add in next
 1. transitions so that the movement betqween pages isnt too clunky
 2. a set of videos on the about page, that is generated randomly much like the icons (keep this responsive)
-3. at a certain size of display, limit the size of each of the cards

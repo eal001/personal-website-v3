@@ -123,6 +123,9 @@ ul {
     border-radius: 3rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
 }
 
 .list-content {
@@ -132,6 +135,9 @@ ul {
     padding: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .list-content ul::before {
@@ -154,6 +160,9 @@ ul {
     border-radius: 3rem;
     margin: 1rem;
     line-height: 1;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image-content img {
@@ -184,8 +193,11 @@ ul {
     background-color: var(--content-color);
     padding: 2rem;
     border-radius: 3rem;
+    max-width: 1000px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1;
 }
 
@@ -251,6 +263,7 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 60%;
+    max-width: 1000px;
     z-index: 1;
 }
 
