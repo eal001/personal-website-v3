@@ -2,19 +2,19 @@ export class Style_Config {
     light_colors = {
         background_color: "rgb(234, 227, 211)",
         text_color: "rgb(44, 66, 81)",
-        accent_color: "rgb(252, 81, 48)",
-        accent_interaction_color: "rgb(255, 255, 0)",
+        accent_color: "rgb(232, 64, 40)",
+        accent_interaction_color: "rgb(252, 81, 48)",
         content_color: "rgb(235, 235, 235)",
         detail_color: "rgb(240, 240, 240)",
         transparent_widget_color: "rgb(255,255,255, 0.25)"
     };
     darkColors = {
-        background_color: "rgb(9, 22, 19)",
+        background_color: "rgb(13, 19, 19)",
         text_color: "rgb(163, 155, 168)",
         accent_color: "rgb(236, 164, 0)",
         accent_interaction_color: "rgb(255, 255, 0)",
-        content_color: "rgb(32, 7, 10)",
-        detail_color: "rgb(30, 10, 12)",
+        content_color: "rgb(22, 7, 10)",
+        detail_color: "rgb(18, 10, 12)",
         transparent_widget_color: "rgb(0,0,0, 0.25)"
     }
 
