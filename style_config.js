@@ -25,7 +25,6 @@ export class Style_Config {
      */
     set_colors_to_css_variables(theme) {
 
-        console.log("setting css variables");
         if (theme != "light" && theme != "dark") {
             throw new Error(`theme '${theme}' not supported`);
         }
