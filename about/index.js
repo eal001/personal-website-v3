@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', init);
  */
 function init() {
     choose_header_icons();
-    // choose_header_background();
 
     init_color_theme();
 }
