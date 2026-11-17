@@ -1,10 +1,12 @@
 import { Style_Config } from "./style_config.js";
+import { init_nav_indicator } from "./nav_indicator.js";
 
 const COLOR_THEME_FIELD = "color_theme";
 /**
  * Initializes the color theme
  */
 export function init_color_theme() {
+    init_nav_indicator();
     const style_config = new Style_Config();
     const light_button = document.querySelector("button#light");
     const dark_button = document.querySelector("button#dark");

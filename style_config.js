@@ -6,7 +6,7 @@ export class Style_Config {
         accent_interaction_color: "rgb(252, 93, 76)",
         content_color: "rgb(235, 235, 235)",
         detail_color: "rgb(240, 240, 240)",
-        transparent_widget_color: "rgb(255,255,255, 0.25)"
+        transparent_widget_color: "rgb(255,255,255, 1)"
     };
     darkColors = {
         background_color: "rgb(13, 19, 19)",
@@ -15,7 +15,7 @@ export class Style_Config {
         accent_interaction_color: "rgb(255, 255, 0)",
         content_color: "rgb(22, 7, 10)",
         detail_color: "rgb(18, 10, 12)",
-        transparent_widget_color: "rgb(0,0,0, 0.25)"
+        transparent_widget_color: "rgb(0,0,0, 1)"
     }
     switch_transition = "transform 250ms ease-out";
 

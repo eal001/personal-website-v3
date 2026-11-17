@@ -18,7 +18,7 @@
     --accent-interaction-color: rgb(255, 255, 0);
     --content-color: rgb(235, 235, 235);
     --detail-color: rgb(240, 240, 240);
-    --transparent-widget-color: rgb(255,255,255, 0.25);
+    --transparent-widget-color: rgb(255,255,255, 1);
 }
 
 html {
@@ -170,6 +170,7 @@ ul {
     height: 10rem;
     padding: 0;
     border: 5px solid transparent;
+    transition: border-color 300ms ease-in-out;
 }
 
 .image-content p {
@@ -220,6 +221,21 @@ ul {
     position: absolute;
     height: 64px;
     width: 64px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.header-icon-container + div ~ .header-icon-container .header-icon {
+    animation-duration: 8s;
+    animation-delay: -3s;
+}
+
+@keyframes float {
+    0%, 100% { translate: 0 0; rotate: 0deg; }
+    50% { translate: 12px -16px; rotate: 8deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header-icon { animation: none; }
 }
 
 .header-icon-container {
@@ -263,13 +279,29 @@ nav {
     top: 0px;
     background-color: var(--transparent-widget-color);
     border-radius: 2rem;
-    padding: 1rem;
+    padding: 1rem 1.4rem;
     margin: 1rem;
     display: flex;
     justify-content: space-between;
     width: 60%;
     max-width: 1000px;
     z-index: 1;
+}
+
+.nav-indicator {
+    position: absolute;
+    margin: -0.35rem -0.75rem;
+    padding: 0.35rem 0.75rem;
+    box-sizing: content-box;
+    border-radius: 1rem;
+    background-color: var(--accent-color);
+    opacity: 1;
+    pointer-events: none;
+    transition: left 350ms cubic-bezier(0.34, 1.4, 0.64, 1), width 350ms cubic-bezier(0.34, 1.4, 0.64, 1), top 350ms ease, height 350ms ease, opacity 250ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-indicator { transition: none; }
 }
 
 nav a {
